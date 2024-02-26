@@ -1,0 +1,8 @@
+public class Main {
+    public static void main(String[] args)
+    { // first # will start at 10 and will subtract by 2 until it reaches 0
+        for (int i = 10; i >= 0; i-=2) {
+            System.out.println(i);
+        }
+    }
+}
