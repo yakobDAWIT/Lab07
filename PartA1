@@ -1,0 +1,8 @@
+public class Main {
+    public static void main(String[] args)
+    { // first # will start at 0 and will add 1 until it reaches 30
+        for (int i = 0; i <= 30; i++) { 
+            System.out.println(i);
+        }
+    }
+}
