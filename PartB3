@@ -1,0 +1,12 @@
+public class Main {
+    public static void main(String[] args)
+    { // provides 5 lines
+        for (int i = 1; i <= 5; i++)
+        { // keep 5 * for each line provided
+            for (int s = 1; s <= 5; s++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
