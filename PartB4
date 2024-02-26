@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        char choice;
+        boolean done = false;
+
+        do {
+            System.out.println("Select (C to F) or (F to C)"); // display choice
+            System.out.print("Enter your choice: "); // asks for user input
+            choice = scanner.next().charAt(0); // enter choice c or f
+            if (choice == 'C' || choice == 'c' || choice == 'F' || choice == 'f') {
+                done = true; // ends loop
+            } else {
+                System.out.println("Invalid choice. Please enter C or F."); //displays invalid choice
+            }
+        }
+        while (!done); // loops until done = true
+
+        double temperature;
+        if (Character.toUpperCase(choice) == 'C') { // convert Celsius to Fahrenheit
+            System.out.print("Enter temperature in Celsius: ");
+            temperature = scanner.nextDouble();
+            double fahrenheit = ctf(temperature);
+            System.out.println("Temperature in Fahrenheit: " + fahrenheit); // display Fahrenheit
+        } else { // convert Fahrenheit to Celsius
+            System.out.print("Enter temperature in Fahrenheit: ");
+            temperature = scanner.nextDouble();
+            double celsius = ftc(temperature);
+            System.out.println("Temperature in Celsius: " + celsius); // display Celsius
+        }
+    }
+
+    public static double ctf(double celsius) { // how to convert Celsius to Fahrenheit
+        return (celsius * 9 / 5) + 32;
+    }
+
+    public static double ftc(double fahrenheit) { // how to convert Fahrenheit to Celsius
+        return (fahrenheit - 32) * 5 / 9;
+    }
+}
